@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/story.css">
+    <title>Story</title>
+    <script src="https://kit.fontawesome.com/a02a606cac.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="delayedContent">
+        <nav class="navbar">
+            <div class="navbar__logo">
+                <i class="fa-solid fa-book-bookmark "></i>
+                <a>Storyload</a>
+            </div>
+
+            <ul class="navbar__menu">
+                <li><a href="main.html">Home</a></li>
+                <li><a href="">Story</a></li>
+                <li><a href="feed.html">Feed</a></li>
+                <li><a href="post.html">Post</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+
+            <ul class="navbar__icons">
+                <li><i class="fa-brands fa-twitter"></i></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="overlay-container">
+        <div class="sharp-circle"></div>
+        <div class="flex-content">
+            <div class="image-container">
+                <img src="img/cutphoto.png" width="200" height="200">
+                <div style="font-size: 20px;">PIECE PROJECT</div>
+                &copy; 2023 Content kim JaeHyeon
+            </div>
+            <div class="text-container">
+                CREATED BY<br> 
+                <span style="font-size: 55px; color: orange;">STORYLOAD</span>             
+            </div>
+        </div>        
+    </div>
+
+    <div id="logoutDiv" class="start">
+        <div class="profile">
+            <img src="user/userphoto.png" width="70" height="70">
+            <div class="profile-text">
+                <div style="font-weight: bolder; font-size: 25px">UserName</div>
+                <div style="font-size: 12px">Republic of Korea</div>
+            </div>
+        </div>
+
+        <div class="page-transition">
+            <div class="board-mode" onclick="resetImagesToOriginalPosition()">
+                <div style="font-weight: bold; font-size: 17px">Board Mode</div>
+                <div style="font-size: 10px">Show Board Mode ></div>
+            </div>
+            <div class="screen-mode" onclick="ImagestoScreenMode()">
+                <div style="font-weight: bold; font-size: 17px">Screen Mode</div>
+                <div style="font-size: 10px">Show Screen Mode ></div>
+            </div>
+        </div>
+
+        <div class="photo-banner">      
+            <div id="photoInfo" class="photo-information">
+                <div style="font-weight: bold; font-size: 17px">Information ></div>
+                <div style="font-size: 10px">update : <span id="updateText"></span></div>
+                <div style="font-size: 10px">filename : <span id="filenameText"></span></div><br>
+                <div style="font-size: 10px">"If you want to see more</div>
+                <div style="font-size: 10px">information, click on the Feed!"</div>
+            </div>
+            <div class="play-list">
+                <div style="font-size: 10px">----------------- | Play List | -----------------</div>
+                <div style="font-weight: bold; font-size: 12px">Kitch</div>
+            </div>
+        </div> 
+        
+        <ul class="friend-list">
+            <li>친구목록</li>
+            <li>친구목록</li>
+            <li>친구목록</li>
+            <li>친구목록</li>
+        </ul>
+    </div>
+    
+    <div class="photo-board" id="photoBoard">
+    </div>
+    <script src="js/story.js"></script>
+</body>
+</html>
