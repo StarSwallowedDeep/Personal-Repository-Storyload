@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainday</title>
+</head>
+<body>
+    <section>
+        <canvas id="rainCanvas"></canvas>
+        <img id="bg">
+    </section>  
+    <script>
+        function rain() {
+            const image = document.getElementById('bg');
+
+            image.onload = function() {
+                const rainyDay = new RainyDay({
+                    image: this,
+                    fps: 50
+                })
+                rainyDay.rain([[10, 10, 0.1]])
+            }
+
+            image.crossOrigin = 'anonymous';
+            image.src = 'http://i.imgur.com/U1Tqqdw.jpg';
+        }
+        
+        rain()
+    </script>
+    <script src="js/rainyday.js"></script>
+</body>
+</html>
