@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/post.css">
+    <title>Post</title>
+    <script src="https://kit.fontawesome.com/a02a606cac.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="delayedContent">
+        <nav class="navbar">
+            <div class="navbar__logo">
+                <i class="fa-solid fa-book-bookmark"></i>
+                <a>Storyload</a>
+            </div>
+
+            <ul class="navbar__menu">
+                <li><a href="main.html">Home</a></li>
+                <li><a href="story.html">Story</a></li>
+                <li><a href="feed.html">Feed</a></li>
+                <li><a href="">Post</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+
+            <ul class="navbar__icons">
+                <li><i class="fa-brands fa-twitter"></i></li>
+            </ul>
+        </nav>
+    </div>   
+    
+    <div id="logoutDiv" class="start">
+        <div class="profile">
+            <img src="user/userphoto.png" width="70" height="70">
+            <div class="profile-text">
+                <div style="font-weight: bolder; font-size: 25px">UserName</div>
+                <div style="font-size: 12px">Republic of Korea</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="photoInfo" class="photo-information">
+        <div style="font-weight: bolder; font-size: 30px">Posting Page</div>
+    </div>
+
+    <div class="container">
+    </div>
+
+    <div class="feed-item">
+        <div class="feed-image">
+            <img src="" class="image" onclick="openImagePicker()">
+            <div class="icon-container">
+                <div class="cloud-button icon"><i class="fas fa-cloud"></i></div>
+                <div class="bubble-button icon"><i class="fas fa-comment-dots"></i></div>
+                <div class="bookmark-button icon"><i class="fas fa-bookmark"></i></div>               
+            </div>
+        </div>
+        <div class="feed-info">
+            <div id="weatherOptions" class="options">
+                <button onclick="selectWeather('snow')">Snow</button>
+                <button onclick="selectWeather('windy')">Windy</button>
+                <button onclick="selectWeather('flower')">Flower</button>
+            </div>
+            <div id="result"></div>
+            <h3 class="feed-title" data-index="0" onclick="editTitle(this)">사진 제목</h3>
+            <p class="feed-description" data-index="0" onclick="editDescription(this)">사진에 대한 설명이 여기에 들어갑니다.</p><br>
+            <div id="exampleListContainer"></div>
+            <button class="post-button">Post</button>
+        </div>
+    </div>
+    <script src="js/post.js"></script>
+</body>
+</html>
