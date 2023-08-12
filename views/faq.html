@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <script src="https://kit.fontawesome.com/a02a606cac.js" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --text-color: #f0f4f5;
+            --background-color: #263343;
+            --accent-color: #c4b8af;
+        }
+        
+        body {
+            margin: 0;
+            font-family: 'Source Sans Pro';     
+            background-color: #f0f0f0;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--text-color);
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--background-color);
+            padding: 1px 24px;
+            height: 42px;
+        }
+        
+        .navbar__logo {
+            font-size: 17px;
+            color: var(--text-color);
+        }
+        
+        .navbar__logo i {
+            font-size: 17px;
+            color: var(--accent-color);
+        }
+        
+        .navbar__menu {
+            display: flex;
+            font-size: 12px;
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .navbar__menu li {
+            padding: 8px 12px;
+        }
+        
+        .navbar__menu li:hover {
+            background-color: var(--accent-color);
+            border-radius: 4px;
+        }
+        
+        .navbar__icons {
+            list-style: none;
+            color: white;
+            display: flex;
+            padding-left: 0;
+        }
+        
+        .bottom-content {
+            font-size: 12px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            word-spacing: 12px;
+            margin-bottom: 7px;
+        }
+        
+        .bottom-content div {
+            margin-bottom: 7px;
+        }
+        
+        .bottom-content span {
+            word-spacing: normal;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        caption {
+            display: none;
+        }
+
+        b {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .board_list_wrap {
+            padding: 50px;
+        }
+
+        .board_list {
+            width: 60%;
+            border-top: 2px solid var(--background-color);
+            margin: 12% auto 0;
+        }
+
+        .board_list tr {
+            border-bottom: 1px solid #ccc;
+        }
+
+        .board_list th,
+        .board_list td {
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        .board_list td {
+            text-align: center;
+        }
+
+        .board_list .tit {
+            text-align: left;
+        }
+
+        .board_list .tit:hover {
+            text-decoration: underline;
+        }
+
+        .board_list_wrap .paging {
+            margin-top: 10px;
+            text-align: center;
+            font-size: 0;
+        }
+
+        .board_list_wrap .paging b {
+            display: inline-block;
+            margin-left: 20px;
+            padding: 5px 10px;
+            font-size: 12px;
+        }
+
+        .board_list_wrap .paging b:first-child {
+            margin-left: 0;
+        }
+
+        .board_list_wrap .paging b.bt {
+            border-radius: 20px;
+            background: #e9e9e9;
+        }
+
+        .board_list_wrap .paging b.num {
+            color: #cccccc;
+        }
+
+        .board_list_wrap .paging b.num.on {
+            color: black;
+        }
+
+        .center-content {
+            position: absolute;
+            top: 21%;
+            left: 23%;
+            font-size: 150%;       
+        }
+    </style>
+</head>
+<body>
+    <div id="delayedContent">
+        <nav class="navbar">
+            <div class="navbar__logo">
+                <i class="fa-solid fa-book-bookmark"></i>
+                <a>Storyload</a>
+            </div>
+
+            <ul class="navbar__menu">
+                <li><a href="main.html">Home</a></li>
+                <li><a href="story.html">Story</a></li>
+                <li><a href="feed.html">Feed</a></li>
+                <li><a href="post.html">Post</a></li>
+                <li><a href="">FAQ</a></li>
+            </ul>
+
+            <ul class="navbar__icons">
+                <li><i class="fa-brands fa-twitter"></i></li>
+            </ul>
+        </nav>
+
+        <div class="bottom-content">
+            <div>
+                소개 도움말 위치 API 개인정보 약관 연락처 개발자
+            </div>
+            <div>
+                <span>한국어 &copy; 2023 from Storyload</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="center-content">
+        <h1>FAQ</h1>
+    </div>
+
+    <div class="board_list_wrap">
+        <table class="board_list">          
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>글쓴이</th>
+                    <th>작성일</th>
+                    <th>조회</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td class="tit">
+                        <b href="#">자주 묻는 질문</b>
+                    </td>
+                    <td>관리자</td>
+                    <td>2023-07-10</td>
+                    <td>200</td>                    
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="tit">
+                        <b href="#">메인 페이지에서 시작하기</b>
+                    </td>
+                    <td>관리자</td>
+                    <td>2023-07-11</td>
+                    <td>110</td>                    
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="tit">
+                        <b href="#">Storyload 의 주요기능 "사진 애니메이션, 피드 올리기, 로그인 구현"</b>
+                    </td>
+                    <td>관리자</td>
+                    <td>2023-07-15</td>
+                    <td>155</td>                    
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="tit">
+                        <b href="#">개발에 사용된 환경과 언어 html, css, js, node.js</b>
+                    </td>
+                    <td>관리자</td>
+                    <td>2023-08-04</td>
+                    <td>130</td>                    
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td class="tit">
+                        <b href="#">공지사항</b>
+                    </td>
+                    <td>관리자</td>
+                    <td>2023-08-09</td>
+                    <td>211</td>                    
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td class="tit">
+                        <b href="#"></b>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>                    
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td class="tit">
+                        <b href="#"></b>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>                    
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td class="tit">
+                        <b href="#"></b>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>                    
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td class="tit">
+                        <b href="#"></b>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>                    
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td class="tit">
+                        <b href="#"></b>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>                    
+                </tr>               
+            </tbody>
+        </table>
+        <div class="paging">
+            <b href="#" class="bt">첫 페이지</b>
+            <b href="#" class="bt">이전 페이지</b>
+            <b href="#" class="num on">1</b>
+            <b href="#" class="num">2</b>
+            <b href="#" class="num">3</b>
+            <b href="#" class="bt">다음 페이지</b>
+            <b href="#" class="bt">마지막 페이지</b>
+        </div>
+    </div>   
+</body>
+</html>
