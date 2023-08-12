@@ -1,0 +1,98 @@
+<!-- Loading screen -->
+<!-- Start Page -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storyload</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-size: 24px;
+            color: black;
+            background-color: #f0f0f0;
+        }
+
+        .loading-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .loading-text {
+            margin-right: 10px;
+        }
+
+        .blinking {
+            animation: blink 0.5s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        #text-container {
+            font-weight: bold;
+            color: #263343;
+        }
+        
+        #number-container {
+            font-size: 17px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-container">
+        <div id="text-container"></div>
+        <div class="loading-text" id="number-container">&nbsp;</div>
+    </div>
+    <script>
+        var words = "Storyload";
+        var index = 0;
+        var textContainer = document.getElementById("text-container");
+
+        function addLetter() {
+            if (index <= words.length) {
+                textContainer.textContent = words.substring(0, index);
+                index++;
+                setTimeout(addLetter, 150);
+            } else {
+                var numContainer = document.getElementById("number-container");
+                numContainer.textContent = ""; 
+
+                var num = 1; 
+                function countNumber() {
+                    if (num <= 100) {
+                        numContainer.textContent = words + " " + num + "%"; 
+                        num++;
+                        setTimeout(countNumber, 35);
+                    } else {
+                        setTimeout(function () {
+                            window.location.href = "main.html";
+                        }, 700);
+                    }
+                }
+
+                function blinkNumber() {
+                    numContainer.classList.toggle("blinking");
+                }
+
+                
+                setTimeout(function() {
+                    textContainer.textContent = ""; 
+                    countNumber();
+                    setInterval(blinkNumber, 500);
+                }, 500); 
+            }
+        }
+
+        addLetter();
+    </script>
+</body>
+</html>
