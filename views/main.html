@@ -1,0 +1,120 @@
+<!-- 
+
+Main Website Storyload
+
+Date of Code Creation: July 10, 2023
+Copyright (c) 2023 Kim JaeHyeon 
+
+This source code is licensed under the terms of the MIT License
+
+This is the page you will access after receiving authentication from login
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Storyload</title>
+    <script src="https://kit.fontawesome.com/a02a606cac.js" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <div id="delayedContent" style="display: none;">
+        <nav class="navbar">
+            <div class="navbar__logo">
+                <i class="fa-solid fa-book-bookmark"></i>
+                <a>Storyload</a>
+            </div>
+
+            <ul class="navbar__menu">
+                <li><a href="">Home</a></li>
+                <li><a href="">Story</a></li>
+                <li><a href="">Feed</a></li>
+                <li><a href="">Post</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+
+            <ul class="navbar__icons">
+                <li><i class="fa-brands fa-twitter"></i></li>
+            </ul>
+        </nav>
+
+        <div class="bottom-content">
+            <div>
+                소개 도움말 위치 API 개인정보 약관 연락처 개발자
+            </div>
+            <div>
+                <span>한국어 &copy; 2023 from Storyload</span>
+            </div>
+        </div>
+
+        <div class="storyload-container">
+            <div class="storyload-title">
+                Storyload
+            </div>
+            <div class="storyload-text">
+                특별한 공간에 당신의 스토리를 보관하세요<br>
+                그날 느낀 분위기를 표현하고 간직해 보세요<br>
+                지금 공유하고 저장하고 싶으시다면 시작하세요
+            </div>
+            <div>
+                <button class="start-button" onclick="showLoginForm()">시작하기</button>
+            </div>
+        </div>
+
+        <div class="photo-container" style="width: 300px; height: 200px; left: 50%; top: 45%; z-index: -1; ">
+            <img src="img/photo_01.jpg">
+        </div>
+        
+        <div class="photo-container" style="width: 200px; height: 150px; left: 55%; top: 20%; z-index: -1; ">
+            <img src="img/photo_02.jfif">
+        </div>
+        
+        <div class="photo-container" style="width: 300px; height: 200px; left: 70%; top: 35%; z-index: -1; ">
+            <img src="img/photo_03.jfif">
+        </div>
+        
+        <div class="photo-container" style="width: 100px; height: 70px; left: 75%; top: 20%; z-index: -1; ">
+            <img src="img/photo_04.jpg">
+        </div>
+        
+        <div class="photo-container" style="width: 170px; height: 100px; left: 65%; top: 75%; z-index: -1; ">
+            <img src="img/photo_05.jpg">
+        </div>
+        
+        <div class="photo-container" style="width: 200px; height: 150px; left: 80%; top: 65%; z-index: -1; ">
+            <img src="img/photo_06.jpg">
+        </div>        
+    </div>
+
+    <div id="loginFormWrapper" style="display: none;">
+        <div class="login-wrapper">
+            <section class="login-form">
+                <h1>STORYLOAD</h1>
+                <form action="story.html">
+                    <div class="int-area">
+                        <input type="text" name="id" id="id" autocomplete="off" required>
+                        <label for="id">NICKNAME</label>
+                    </div>
+                    <div class="int-area">
+                        <input type="password" name="pw" id="pw" autocomplete="off" required>
+                        <label for="pw">PASSWORD</label>
+                    </div>
+                    <div class="btn-area">
+                        <button id="btn" type="submit">GO START</button>
+                    </div>
+                </form>
+                <div class="caption">
+                    <a >Create and sign in |</a>
+                    <a href="#" onclick="showDelayedContent()">Home</a>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
