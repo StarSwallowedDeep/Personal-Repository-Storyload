@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/feed.css">
+    <title>Feed</title>
+    <script src="https://kit.fontawesome.com/a02a606cac.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-KFfoUSQep8auA7nmfVcOXkWPEJMBN0KVADx8TVxODzgRc3ihFDv79b0EOy4pgc33J3g9R0duIaXENitXQdOkg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="delayedContent">
+        <nav class="navbar">
+            <div class="navbar__logo">
+                <i class="fa-solid fa-book-bookmark"></i>
+                <a>Storyload</a>
+            </div>
+
+            <ul class="navbar__menu">
+                <li><a href="main.html">Home</a></li>
+                <li><a href="story.html">Story</a></li>
+                <li><a href="">Feed</a></li>
+                <li><a href="post.html">Post</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+
+            <ul class="navbar__icons">
+                <li><i class="fa-brands fa-twitter"></i></li>
+            </ul>
+        </nav>
+    </div>   
+    
+    <div id="logoutDiv" class="start">
+        <div class="profile">
+            <img src="user/userphoto.png" width="70" height="70">
+            <div class="profile-text">
+                <div style="font-weight: bolder; font-size: 25px">UserName</div>
+                <div style="font-size: 12px">Republic of Korea</div>
+            </div>
+        </div>
+
+        <div class="photo-banner">      
+            <div id="photoInfo" class="photo-information">
+                <div style="font-weight:bolder; font-size: 12px">피드</div><hr>
+            </div>
+        </div>
+        
+        <ul class="friend-list">
+            <li>친구목록</li>
+            <li>친구목록</li>
+            <li>친구목록</li>
+            <li>친구목록</li>
+            <li>친구목록</li>
+            <li>친구목록</li>
+            <li>친구목록</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <form action="https://www.google.com/search" method="GET">
+            <div class="search-box">
+                <input type="text" id="searchQuery" name="q" required>
+                <label for="searchQuery"></label>
+                <button style="font-weight: bold; font-size: 12px" type="submit">검색</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="follow-button">
+        <span class="follow-text">팔로우</span>
+        <span class="follow-count">+210</span>
+    </div>
+
+    <div class="like-container">
+        <button class="like-button" onclick="toggleLike()">
+            <span class="like-icon">&#x2661;</span>
+            <span class="like-text">Like</span>
+            <span class="like-count">0</span>
+        </button>
+    </div>
+
+    <div class="feed-photo" id="feedphoto">
+    </div>
+
+    <div class="card">
+        <div class="imgBox">
+            <img src="">
+            <img src="">
+        </div>
+        <div class="details">
+            <div class="content">
+                <h2></h2>                
+                <div class="social-icons">
+                    <a href="https://www.facebook.com"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                    <a href="raining.html"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="rainyday.html"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.twitch.com"><i class="fa fa-twitch" aria-hidden="true"></i></a>
+                    <button class="prev-button">이전으로 돌아가기</button>
+                    <div class="icon-container">
+                        <i class="icon fa fa-heart"></i>
+                        <i class="icon fa fa-comment"></i>
+                        <i class="icon fa fa-paper-plane"></i>
+                    </div>
+                </div>
+
+                <div class="feed-info">
+                    <span class="feed-title"><span id="updateTitle"></span>
+                    <p class="feed-description"><span id="updateText"></p>
+                </div>                     
+            </div>
+        </div>
+        <div class="button-container">
+            <button class="animation-button" onclick="toggleSnow()">
+              <img src="img/cloudy.svg" id="animation-img">
+            </button>
+        </div>
+    </div> 
+    <script src="js/feed.js"></script>
+</body>
+</html>
