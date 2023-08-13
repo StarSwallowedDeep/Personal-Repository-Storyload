@@ -1,0 +1,450 @@
+:root {
+    --text-color: #f0f4f5;
+    --background-color: #263343;
+    --accent-color: #c4b8af;
+}
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro';     
+    background-color: #dbdbdb;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 24px;
+    height: 42px;
+}
+
+.navbar__logo {
+    font-size: 17px;
+    color: black;
+    z-index: 1;
+}
+
+.navbar__logo i {
+    font-size: 17px;
+    color: black;
+}
+
+.navbar__menu {
+    display: flex;
+    font-size: 12px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navbar__menu li {
+    padding: 8px 12px;
+    z-index: 1;
+}
+
+.navbar__menu li:hover {
+    background-color: var(--accent-color);
+    border-radius: 4px;
+}
+
+.navbar__icons {
+    list-style: none;
+    color: black;
+    display: flex;
+    padding-left: 0;
+    z-index: 1;
+}
+
+.feed-photo {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    top: -10px; 
+    left: 800px;
+    transform-style: preserve-3d;  
+    animation: rotateGallery 4s infinite alternate;
+    cursor: pointer;
+}
+
+.feed-photo span {
+    position: absolute;
+    width: 100%;
+    height: -100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 50deg)) translateZ(400px); 
+}
+
+.feed-photo span img {
+    width: 50%;
+    height: 55%;
+}
+
+@keyframes rotateGallery {
+  from {
+    transform: perspective(800px) rotateY(0);
+  }
+  to {
+    transform: perspective(800px) rotateY(360deg);
+  }
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    top: 25px;
+    left: 270px;
+    z-index: 1;
+}
+
+.profile-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.photo-information {   
+    position: absolute;
+    top: 210px;
+    left: 900px;
+}
+
+hr {
+    margin: 3px 0;
+}
+
+.friend-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: small;
+    margin-left: 3%;
+    margin-top: 5%;
+}
+
+.friend-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.friend-list li:last-child {
+    border-bottom: none;
+}
+
+.container {
+    background-color: #f0f4f5;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    padding: 50px 10px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+  
+.search-box {
+    position: relative;
+    display: inline-block;
+    position: fixed;
+    top: 47px;
+    left: 45.8%;
+}
+  
+input {
+    height: 17px;
+    padding: 8px 40px 8px 10px;
+    border: 1px solid #dbdbdb;
+    border-radius: 7px;
+}
+
+button {
+    background-color: #dbdbdb;
+    color: #000000;
+    border: none;
+    border-radius: 7px;
+    padding: 8px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+  
+button:hover {
+    background-color: #c9c9c9;
+}
+
+.follow-button {
+    padding: 7px 20px;
+    background-color: #0095f6;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    top: 47px;
+    left: 500px;
+}
+
+.followed {
+    background-color: #ddd;
+    color: #000;
+}
+
+.like-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 450px;
+    left: 50px;
+}
+
+.like-button {
+    padding: 7px 15px;
+    background-color: #0095f6;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.like-icon {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.like-count {
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.card {
+    top: -500px;
+    left: 40%;
+    display: none;
+    position: relative;
+    width: 500px;
+    height: 600px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    box-shadow: 10px 20px 40px rgba(0,0,0,0.25);
+    transition: 1s;
+}
+
+.card:hover {
+    transform: translateX(50%);
+}
+
+.card .imgBox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transition: 1s;
+}
+
+.card:hover .imgBox {
+    transform: rotateY(-180deg);
+}
+
+.card .imgBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.card .imgBox img:nth-child(2) {
+    transform: rotateY(180deg);
+}
+
+.content {
+    border: 1px solid #a0a0a0;  
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    padding: 10px 80px;
+}
+
+.card .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.card .details .content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card .details .content h2 {
+    text-align: center;
+    line-height: 2em;
+}
+
+.card .details .content .social-icons {
+    position: relative;
+    display: flex;
+    margin-top: 15px;
+}
+
+.card .details .content .social-icons a {
+    width: 35px;
+    height: 35px;
+    background: black;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+.card .details .content .social-icons a:hover {
+    background: rgb(165, 160, 160);
+}
+
+.feed-info {
+    overflow: hidden;
+    background-color: #fff;  
+    position: relative;
+    top: 95px;
+    left: -110px;
+}
+
+.icon-container {
+    position: absolute;
+    bottom: -110px;
+    right: -70px;
+    display: flex;
+}
+
+.icon-container .icon {
+    margin-right: 10px; 
+}
+
+.feed-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.feed-description {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+}
+
+.animation-button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    width: 50px; 
+    height: 50px; 
+    transform: translate(437px, -438px); 
+}
+
+.animation-button img {
+    width: 100%; 
+    height: 100%; 
+}
+
+.snowflake {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: snowfall linear infinite;
+}
+
+@keyframes snowfall {
+  0% {
+    transform: translateY(-1500px);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+leaf {
+    position: absolute;
+    pointer-events: none; 
+    filter: drop-shadow(0 0 15px rgba(0,0,0,0.5));
+}
+
+leaf::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../img/leaf.png');
+    background-size: cover;
+    animation: moveShape 2s linear infinite;
+}
+
+@keyframes moveShape {
+    0%
+    {
+        transform: translate(0) rotate(0deg);
+    }
+    100%
+    {
+        transform: translate(300px) rotate(360deg);
+    }
+}
+
+.surface {
+    height: 140px;
+    width: 500%;
+    margin: -4rem auto;         
+    position: relative;
+    background: url('../img/surface.png');
+    display: block;
+    Position: absolute;
+    bottom: 10%;
+    left: 0%;
+    z-index: 1;
+    background-repeat: repeat-x;
+    animation:moveRight 7s linear infinite;
+}
+
+@keyframes moveRight {
+    100%
+    {
+        transform:translateX(-2900px);
+    }
+}
